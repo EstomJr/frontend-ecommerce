@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import api from '../services/api'
- 
+import vestidoLindo from '../components/vestido-lindo.jpg'
+import './Looks.css' 
 
 function Looks(){
  async function getLook(){
@@ -12,19 +12,25 @@ function Looks(){
   })
   }
   getLook()
+
+       
         return (
             <Carousel>
                 <div>
-                    <img src="assets/1.jpeg" />
-                    <p className="legend">Legend 1</p>
+                    <h1>Produtos da Loja</h1>
+                    <img src={vestidoLindo} alt="imagem1" />
+                    <p className="legend"></p>
                 </div>
                 <div>
-                    <img src="assets/2.jpeg" />
-                    <p className="legend">Legend 2</p>
+                <h1>Produtos da Loja</h1>
+                    <img src={vestidoLindo} alt="imagem2" />
+                    <p className="legend"></p>
                 </div>
                 <div>
-                    <img src="assets/3.jpeg" />
-                    <p className="legend">Legend 3</p>
+                <h1>Produtos da Loja</h1>
+                    <img src={vestidoLindo} alt="imagem3" />
+                    <p className="legend"></p>
+                    
                 </div>
             </Carousel>
         );

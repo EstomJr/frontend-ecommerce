@@ -22,10 +22,11 @@ function Cadastro() {
         formdata.append("imagemProduct", imagemProduct);
 
         const response = await api.request({
-            url: '/look', method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded " },
+            url: '/look', method: "POST", headers: { "Content-Type": "application/json " },
             data: formdata
         })
         console.log(response.data);
+        console.log(imagemProduct)
     }
 
     return (
